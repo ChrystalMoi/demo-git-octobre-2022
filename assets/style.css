@@ -5,5 +5,35 @@
     margin:  0 auto; /*centrer container dans l'écran*/
     padding: 0 20px; /*marge interne de 20px à gauche et droite*/
     box-sizing: border-box; /*par défaut width : 100 40px cette règle permet d'inclure les 40px dans le 100%*/
-    border: 2px solid purple; /**/
+    border: 2px solid purple;
+    border-radius: 10px;
+}
+
+/*Corps du formulaire avec les input*/
+.corps {
+    font-family: sans-serif;
+    width: 100%; /*si l'écran de la fenetre est inférieur à 1200px alors container = 100%*/
+    max-width: 1200px; /*si l'écran de la fenetre est supérieur à 1200px alors container = 1200px*/
+    margin:  0 auto; /*centrer container dans l'écran*/
+    padding: 20px 20px; /*marge interne de 20px à gauche et droite*/
+    box-sizing: border-box; /*par défaut width : 100 40px cette règle permet d'inclure les 40px dans le 100%*/
+    border: 2px solid purple;
+    border-radius: 10px;
+}
+
+/*Bouton*/
+.valider{
+    font-family: sans-serif;
+    margin:  0 auto; /*centrer container dans l'écran*/
+    padding: 0 20px; /*marge interne de 20px à gauche et droite*/
+    box-sizing: border-box; /*par défaut width : 100 40px cette règle permet d'inclure les 40px dans le 100%*/
+}
+
+input {
+    margin: .4rem 0;
+}
+
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
 }
