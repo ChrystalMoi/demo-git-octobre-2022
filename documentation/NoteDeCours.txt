@@ -1,0 +1,270 @@
+Support de cours : https://formation.webdevpro.net/git/
+
+Projet que l'on veut réaliser => projet de formulaire
+Créer un article = envoyer => ajouter dans la pagge
+HTML / CSS / JS
+
+Organisation Projet :
+    création de dossier : 
+        assets
+            CSS
+            Javascript
+            images
+        documentation
+            Notes de cours
+    Fichier (à la racine):
+        cours git
+        index.HTML
+
+=> git pour pouvoir versionner (suivre les version / les évolutions de notre projet en html / css / js)
+
+----------------
+
+Commande qui permet de créer un dépôt / repository
+Dossier local qui va contenir toutes les évolutions de notre projet
+Attention, il faut saisir cette commande en choisissant le PATH de la racine du projet que l'on veut suivre
+    git init
+    réponse : Initialized empty Git repository in C:/Users/crycr/OneDrive/Documents/Doranco/Versioning avec GIT/.git/
+
+Le dossier .git est un dossier caché par défaut et il stock les différentes version de notre projet. 
+On ne manipule pas le contenu de ce dossier !
+
+----------------
+
+git config --global user.name "Chrystal Bastid" /*permet à git d’attacher votre nom*/
+git config --global user.email "chrystal.bastid@gmail.com"
+git config -l
+    résultat :
+    pack.packsizelimit=2g
+    diff.astextplain.textconv=astextplain
+    filter.lfs.clean=git-lfs clean -- %f
+    filter.lfs.smudge=git-lfs smudge -- %f
+    filter.lfs.process=git-lfs filter-process
+    filter.lfs.required=true
+    http.sslbackend=openssl
+    http.sslcainfo=C:/Program Files (x86)/Git/mingw32/ssl/certs/ca-bundle.crt
+    core.autocrlf=true
+    core.fscache=true
+    core.symlinks=false
+    pull.rebase=false
+    credential.helper=manager-core
+    credential.https://dev.azure.com.usehttppath=true
+    init.defaultbranch=master
+    user.name=Chrystal Bastid
+    user.email=chrystal.bastid@gmail.com
+    core.repositoryformatversion=0
+    core.filemode=false
+    core.bare=false
+    core.logallrefupdates=true
+    core.symlinks=false
+    core.ignorecase=true
+
+-------------
+
+Lancer le Versioning => suivre l'avancer de tous les fichiers dans le dossier git
+    git status
+    réponse :   On branch master                => vous êtes sur la branche master .....
+
+                No commits yet                  => Pour le moment pas de commits / d'enregistrement dans le dossier .git
+
+                Untracked files:                => fichier non suivi
+                (use "git add <file>..." to include in what will be committed) 
+                                                => conseil : si tu veux suivre des fichiers tape "git add <file>
+                        00-start.txt
+                        documentation/
+                        git.pdf
+                        index.html
+
+                nothing added to commit but untracked files present (use "git add" to track)
+
+-----------------------
+
+git add index.html => active le suivi de index.html
+git status
+    On branch master
+
+    No commits yet
+
+    Changes to be committed:
+    (use "git rm --cached <file>..." to unstage)
+            new file:   index.html
+
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+            00-start.txt
+            documentation/
+            git.pdf
+
+-----------------------
+
+git commit -m "creation page index.html" 
+    [master (root-commit) 4187ccc] creation page index.html
+    1 file changed, 12 insertions(+)                                => 1 fichier qui a été stockés dans le .git et il a 12 lignes
+    create mode 100644 index.html
+
+-----------------------
+
+git status
+    On branch master                                                => le fichier index.html est dans le .git donc n'est plus visible ici
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+            00-start.txt
+            documentation/
+            git.pdf
+
+-----------------------
+Après changement de index.html
+
+git status
+    On branch master
+    Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)              => soit on ajoute un autre index.html (version supérieur)
+    (use "git restore <file>..." to discard changes in working directory)   => soir on restore le fichier index.html
+            modified:   index.html
+
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+            00-start.txt
+            documentation/
+            git.pdf
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+
+=> Différence entre le fichier index.html (.git) et le index.html (dans le projet)
+
+-----------------------
+
+git add index.html
+git status
+    On branch master
+    Changes to be committed:
+    (use "git restore --staged <file>..." to unstage)
+            modified:   index.html
+
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+            00-start.txt
+            documentation/
+            git.pdf
+
+git commit -m "ajouter h1 + form"
+    [master 9dc8677] ajouter h1 + form
+    1 file changed, 6 insertions(+), 1 deletion(-)
+
+-----------------------
+
+création fichier css
+relier css à l'html
+
+git add index.html assets/style.css
+git status
+    On branch master
+    Changes to be committed:
+    (use "git restore --staged <file>..." to unstage)
+            new file:   assets/style.css
+            modified:   index.html
+
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+            00-start.txt
+            documentation/
+            git.pdf
+
+git commit -m "ajout du fichier style.css"
+    [master fd7f9a8] ajout du fichier style.css
+    2 files changed, 11 insertions(+), 1 deletion(-)
+    create mode 100644 assets/style.css
+
+-----------------------
+
+Modifier le fichier index.html
+Ajouter deux input dans le formulaire
+
+Modifier le fichier style.css
+Styliser les deux input
+
+=> git add des deux fichiers
+    git add index.html
+    git add index.html assets/style.css
+
+=> git commit -m .... (pour enregistrer ces modification dans .git)
+    git commit -m "ajout + style inputs dans index.html et style.css"
+        [master c1ab4c2] ajout + style inputs dans index.html et style.css
+        2 files changed, 46 insertions(+), 2 deletions(-)
+    git status
+        On branch master
+        Untracked files:
+        (use "git add <file>..." to include in what will be committed)
+                00-start.txt
+                documentation/
+                git.pdf
+
+        nothing added to commit but untracked files present (use "git add" to track)
+
+-----------------------
+modifie / crée un fichier / enregistrement
+
+git add fichier1 fichier2 ...
+git commit -m "message"
+git status
+gitk
+
+    gitk est un outil visuel qui permet d'avoir en détails 
+        - qui
+        - quand
+        - pourquoi (avec le git commit -m "message")
+        - qu'est-ce qui a été modifier
+
+    Git va stocker les modification de manière incrémentable
+    => copie que ce qui est nouveau par contre ce qui est ancien n'est pas copié à nouveau dans le nouveau commit
+
+Commande qui permet de faire :
+    git add fichier1 fichier2 ...
+    git commit -m "message"
+
+    git commit -a -m "message" ou git commit -am "message" (fonctionne uniquement sur des fichier trackés (ajouté dans le git)
+
+-----------------------
+Modifier le fichier index.html
+Ajouter un champ textarea dans le formulaire
+Appeler le fichier script.js via la balise <script src="">
+
+Modifier le css pour styliser le textarea
+
+Modifier le fichier script.js
+Ajouter un écouteur évènement lors que l'ou soumet un formulaire
+
+enregistrer toutes ces modifications dans .git
+
+-----------------------
+Revenir en arrière/dans le passé
+Commande possible (x3):
+    - git checkout <fichier>                => Revenir au dernier commit si le fichier n'a pa été commit 
+    - git log --oneline
+      git revert <numéro> -m <message>      => Retour dans le passé
+    - git log --oneline
+      git reset <id commit> --hard          => Revient à l’ancien commit sans rien conserver
+      git reset <id commit> --soft          => Revient à l’ancien commit en conservant les fichiers à l’état unstaged
+      git reset <id commit> --mixte         => revient à l’ancien commit en mettant les fichiers à l’état 
+                                               modified/ untracked/ deleted(mode par défaut)
+Voir un projet dans un état précédent
+    git log --oneline
+    git checkout <id_commit>
+Juste pour regarder => ne pas modifier le fichiers / copier coller
+    git checkout master / main (remet au dernier commit de la branche master)
+
+-----------------------
+Monde parallèle à la branche principale
+
+branch
+
+git status
+git add -1
+git commit -m "fin"
+git status
+
+git branch mise-en-formulaire
+git branch
+
+
+

@@ -1,0 +1,42 @@
+Support de cours : https://formation.webdevpro.net/git/
+    Login : git
+    Mot de passe : git
+
+Développeur => créer / modifier / partager des fichiers
+
+Git & github répondent aux questions suivantes
+    -> Qui est intervenu
+    -> Pourquoi ?
+    -> Quand ?
+    -> Qu'est ce qui a été modifier ?
+
+Installation :
+    https://git-scm.com/downloads 
+    git --version
+        git version 2.38.1.windows.1 (réponse)
+
+------------------------------------------------
+
+Projet que l'on veut réaliser => projet de formulaire
+Créer un article = envoyer => ajouter dans la pagge
+HTML / CSS / JS
+
+Organisation Projet :
+    création de dossier : 
+        assets
+            CSS
+            Javascript
+            images
+        documentation
+            Notes de cours
+    Fichier (à la racine):
+        cours git
+        index.HTML
+
+
+
+
+
+
+
+
