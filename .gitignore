@@ -1,4 +1,8 @@
-# dire la liste des fichiers / dossiers que vous ne voulez pas suivre / versionner
+# liste des dossiers que vous ne voulez pas suivre / versionner
+.gitignore
+
+# liste des fichiers que vous ne voulez pas suivre / versionner
 git.pdf
 00-start.txt
-.gitignore
+
+#git + github => partager ton code aurpès de la communaute
