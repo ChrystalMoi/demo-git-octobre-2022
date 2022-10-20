@@ -4,29 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
     <title>Formulaire création demande</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/script.js" defer></script> 
+    <!--L'attribut defer indique au navigateur de ne pas attendre le script. 
+        Au lieu de cela, le navigateur continuera à traiter le HTML, à construire le DOM. 
+        Le script se charge “en arrière-plan”, puis s'exécute lorsque le DOM est entièrement construit.-->
 </head>
 <body>
     <div class="container">
         <h1>Formulaire de demande</h1>
         <form action="">
-            
-        </form>    
-    </div>
-
-    <br>
-    <div class="corps">
-        <label for="name">Nom (entre 4 et 10 caractères):</label>
-        <input type="text" id="name" name="name" required minlength="4" maxlength="10" size="10">
-        <br>
-        <label for="name">Prénom (entre 4 et 10 caractères):</label>
-        <input type="text" id="name" name="name" required minlength="4" maxlength="10" size="10">
-        <br>
-        <label for="name">Email :</label>
-        <input type="email" id="email" name="email" required minlength="4" maxlength="30" size="30">
-        <br> <br>
-        <input class="valider" type="button" value="Valider">
+            <input type="text" placeholder="Sujet demande">
+            <input type="text" placeholder="Nom de l'utilisateur">
+            <input type="email" placeholder="Email utilisateur">
+            <textarea rows="2" cols="30" placeholder="Voici un textarea"></textarea>
+            <input type="submit" placeholder="Valider">
+        </form>
     </div>
 </body>
 </html>
