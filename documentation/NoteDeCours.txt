@@ -259,12 +259,19 @@ Monde parallèle à la branche principale
 branch
 
 git status
-git add -1
+git add -A
 git commit -m "fin"
 git status
 
-git branch mise-en-formulaire
+git branch mise-en-forme
 git branch
-
+    * master
+    mise-en-forme
+git checkout mise-en-forme
+    Switched to branch 'mise-en-forme'
+    M       documentation/NoteDeCours.txt
+git branch
+      master
+    * mise-en-forme
 
 
