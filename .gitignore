@@ -1,3 +1,4 @@
 # dire la liste des fichiers / dossiers que vous ne voulez pas suivre / versionner
 git.pdf
 00-start.txt
+.gitignore
