@@ -263,15 +263,16 @@ git add -A
 git commit -m "fin"
 git status
 
-git branch mise-en-forme
-git branch
+git branch mise-en-forme                    => crée la branch
+git branch                                  => liste des branch
     * master
     mise-en-forme
-git checkout mise-en-forme
-    Switched to branch 'mise-en-forme'
+git checkout mise-en-forme                  => se positionner sur la branche mise-en-forme 
+    Switched to branch 'mise-en-forme'      
     M       documentation/NoteDeCours.txt
 git branch
       master
     * mise-en-forme
 
-
+git add -all
+git commit -m "message"

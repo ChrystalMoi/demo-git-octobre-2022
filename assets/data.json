@@ -1,8 +1,7 @@
 [
     "prix",
     30,
-    { 
-        "nom" : "Alain",
+    {   "nom" : "Alain",
         "age" : 30
     }
 ]
