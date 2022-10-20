@@ -276,3 +276,36 @@ git branch
 
 git add -all
 git commit -m "message"
+
+git checkout master                         => se remettre sur la branche master
+git merge mise-en-forme                     => pour fusionner la branche mise-en-forme avec master
+git branch -d mise-en-forme                 => supprime la branche mise-en-forme
+
+-----------------------
+CAS PRATIQUE
+- vérifier que je n'au aucun document à vérifier
+git status
+
+- créer une nouvelle branche exo1
+git branch exo1
+
+- se positionner dessus
+git checkout exo1
+
+- réaliser 3 add / commit sur cette branche
+git add index.html
+    git commit -m "ajout d'un paragraphe dans index.html"
+git add index.html
+    git commit -m "ajout d'un deuxième paragraphe dans index.html"
+git add index.html
+    git commit -m "ajout d'un troisième paragraphe dans index.html"
+
+- revenir sur la branche master (branche principale)
+git checkout master
+
+- fusionner master avec exo1
+git merge exo1
+
+- supprimer la branche exo1
+git branch -d exo1
+
